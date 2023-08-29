@@ -1,0 +1,257 @@
+/* FONTS */
+
+@font-face {
+    font-display: swap; 
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/barlow-v12-latin-regular.woff2') format('woff2');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/barlow-v12-latin-700.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap; 
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/fraunces-v31-latin-regular.woff2') format('woff2');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/fraunces-v31-latin-900.woff2') format('woff2'); 
+}
+
+
+*{
+    box-sizing: border-box;
+}
+
+img{
+    vertical-align: middle;
+}
+
+.visually-hidden{
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.container{
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+
+ul,
+ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: "Barlow", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.site-main{
+    flex-grow: 1;
+}
+
+
+/* HEADER STARTED */
+
+.site-header {
+    padding: 32px 0 40px;
+}
+
+.site-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-header__btn {
+    background-image: url(../images/menu.svg);
+    width: 16px;
+    height: 15px;
+    background-repeat: no-repeat;
+    border: transparent;
+    background-color: transparent;
+    background-size: cover;
+}
+
+.site-header__nav {
+    display: none;
+}
+
+@media only screen and (min-width: 576px) {
+    .site-header__btn {
+        display: none;
+    }
+    
+    .site-header__nav {
+        display: block;
+    }
+    
+    .site-header__list {
+        display: flex;
+        gap: 33px;
+    }
+    
+    .site-header__link {
+        color: #83888F;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 15px;
+        letter-spacing: 0.923px;
+        transition: color 0.3s ease;
+    }
+    
+    .site-header__link:hover {
+        color: #333d4b;
+    }
+    
+    .site-header__logo {
+        width: 236px;
+        height: 26px;
+    }
+}
+
+/* HEADER ENDED */
+
+/* HERO STARTED */
+
+.hero__inner {
+    background-image: url(../images/hero-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 24px 99px;
+    border-radius: 10px;
+}
+
+.hero__wrapper {
+    text-align: center;
+    width: 100%;
+    max-width: 493px;
+}
+
+.hero__title {
+    margin: 0;
+    margin-bottom: 24px;
+    color: #FEFCF7;
+    text-align: center;
+    font-family: "Fraunces";
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 40px;
+}
+
+.hero__description {
+    margin: 0;
+    margin-bottom: 39px;
+    color: #FEFCF7;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+    opacity: 0.8;
+}
+
+.hero__link {
+    display: inline-block;
+    width: 217px;
+    color: #FEFCF7;
+    text-align: center;
+    font-family: "Fraunces";
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 25px;
+    padding: 16px 0;
+    background-color: #0E8784;
+    border-radius: 6px;
+}
+
+@media only screen and (min-width: 576px) {
+    .hero__inner {
+        padding-top: 104px;
+        padding-left: 58px;
+        padding-bottom: 104px;
+        background-image: url(../images/hero-tablet.png);
+    }
+
+    .hero__wrapper {
+        max-width: 398px;
+        text-align: left;
+    }
+
+    .hero__title {
+        text-align: left;
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+    .hero__description {
+        text-align: left;
+        font-size: 15px;
+        line-height: 25px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .hero__inner {
+        padding-top: 117px;
+        padding-left: 85px;
+        padding-bottom: 116px;
+        background-image: url(../images/hero-desktop.png);
+    }
+
+    .hero__wrapper {
+        max-width: 492px;
+        text-align: left;
+    }
+
+    .hero__title {
+        text-align: left;
+        font-size: 72px;
+        line-height: 72px;
+    }
+
+    .hero__description {
+        text-align: left;
+        font-size: 16px;
+        line-height: 26px;
+    }
+}
+
+/* HERO ENDED */
+
+/* FOOTER STARTED */
+/* FOOTER ENDED */
